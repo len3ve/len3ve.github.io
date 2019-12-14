@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Len与Kelly的纪念日</title>
+    <link rel="shortcut icon" href="imgs/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        *{
+            border: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color:inherit;
+        }
+        #goback{
+            font-size: .521rem;
+            color: rgb(147,115,173);
+            margin-left: .3rem;
+            margin-top: -.2rem;
+        }
+        body{
+            background-color:rgb(242, 153, 89);
+            position: relative; 
+        }
+        #heart-wrapper{
+            width: 6rem;
+            height: 6rem;
+            /* background-color: aqua; */
+            margin: 2rem auto;
+            position: relative; 
+            overflow: hidden;
+        }
+        #heart-wrapper .heart-bottom{
+            width: 3rem;
+            height: 3rem;
+            background-color: rgb(252, 214, 151);
+            /* position: absolute; */
+            transform: rotate(45deg);
+            margin: 1.3rem auto;
+        }
+        #heart-wrapper .heart-left{
+            width: 3rem;
+            height: 3rem;
+            background-color: rgb(252, 214, 151);
+            position: absolute;
+            border-radius: 50%;
+            top: .3rem;
+            left: .5rem;
+            transform: translate(.04rem,.04rem); 
+        }
+        #heart-wrapper .heart-right{
+            width: 3rem;
+            height: 3rem;
+            background-color: rgb(252, 214, 151);
+            position: absolute;
+            border-radius: 50%;
+            top: .3rem;
+            transform: translate(.04rem,.04rem);
+            left: 2.5rem;
+        }
+        #heart-wrapper div{
+            animation: do 1.6s ease infinite normal;
+        }
+        @keyframes do{
+            0%{
+                transform: scale(1) rotate(225deg);
+                box-shadow: 0 0 .1rem rgb(252, 214, 151);
+            }
+            25%{
+                transform: scale(1.1) rotate(225deg);
+                box-shadow: 0 0 .1rem rgb(252, 214, 151);
+            }
+            50%{
+                transform: scale(1) rotate(225deg);
+                box-shadow: 0 0 .1rem rgb(252, 214, 151);
+            }
+            75%{
+                transform: scale(1.18) rotate(225deg);
+                box-shadow: 0 0 .1rem rgb(252, 214, 151);
+            }
+            100%{
+                transform: scale(1) rotate(225deg);
+                box-shadow: 0 0 .1rem rgb(252, 214, 151);
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="imgs/heart.png" width="25px" height="25px">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="love.html">LOVE<span class="sr-only">(current)</span></a></li>
+                <li><a href="say.html">爱，说出来<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="look.html">爱，你看<span class="sr-only">(current)</span></a></li>
+                <li><a href="write.html">爱，记下来<span class="sr-only">(current)</span></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<a href="love.html"><i class="glyphicon glyphicon-chevron-left" id="goback"></i></a>
+<div id="heart-wrapper">
+    <div class="heart-left"></div>
+    <div class="heart-right"></div>
+    <div class="heart-bottom"></div>
+</div>
+
+
+
+
+
+
+<script src="jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/rem.js"></script>
+<script>
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Len与Kelly的纪念日</title>
+    <link rel="shortcut icon" href="imgs/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        *{
+            border: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        body{
+            background-color:rgb(242, 153, 89);
+            position: relative; 
+        }
+        .icon {
+            width: 1.8em; height: 1.8em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        .time-wrapper{
+            width: 6rem;
+            height: 3rem;
+            background-color: rgb(252, 214, 151);
+            margin: 0rem auto;
+            position: relative;
+            border-radius: .3rem;
+            box-shadow:rgba(252, 214, 151, .5) .03rem .03rem; 
+        }
+        .time-wrapper .words{
+            color: rgb(236,110,116);
+            font-size: .4rem;
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            left: .3rem;
+            top: .4rem;
+        }
+        .time-wrapper .name{
+            color: rgb(236,110,116);
+            font-size: .521rem;
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            top: 1.2rem;
+            left: 2.4rem;
+        }
+        .time-wrapper .time{
+            color: rgb(236,110,116);
+            font-size: .4rem;
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            top: 2.2rem;
+            left: 1.3rem;
+        }
+        .time-wrapper .time li{
+            float: left;
+        }
+        #button-wrapper{
+            /* background: white; */
+            width: 6rem;
+            height: 3.4rem;
+            position: relative;
+            top: 1rem;
+        }
+        #button-wrapper div{
+            width: 4rem;
+            height: .8rem;
+            background: rgb(252, 214, 151);
+            margin: 0 auto;
+            border-radius: .2rem;
+            margin-bottom: .5rem;
+            /* text-align: center; */
+            position: relative;
+        }
+        #button-wrapper p{
+            color: rgb(236,110,116);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: .35rem;
+            /* text-align: center; */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #button-wrapper svg{
+            position: absolute;
+            top: 50%;
+            left: .2rem;
+            transform: translate(0,-50%);
+        }
+        #active{
+            animation: run 1s linear;
+        }
+        @keyframes run {
+            0%{
+
+            }
+            100%{
+                margin-left: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="imgs/heart.png" width="25px" height="25px">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="love.html">LOVE<span class="sr-only">(current)</span></a></li>
+                <li><a href="say.html">爱，说出来<span class="sr-only">(current)</span></a></li>
+                <li><a href="look.html">爱，你看<span class="sr-only">(current)</span></a></li>
+                <li><a href="write.html">爱，记下来<span class="sr-only">(current)</span></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="time-wrapper">
+    <div class="words">我们相爱至今已有:</div>
+    <div class="name">L&Q</div>
+    <div class="time">
+        <ul>
+            <li id="day"></li>
+            <li id="hour"></li>
+            <li id="min"></li>
+            <li id="sec"></li>
+        </ul>
+    </div>
+</div>
+<div id="button-wrapper" class="container">
+    <div class="say">
+        <svg class="icon" aria-hidden="true" class="say-icon">
+            <use xlink:href="#icon-love"></use>
+        </svg>
+        <p>爱，说出来</p>
+    </div>
+    <div class="look">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-love-"></use>
+        </svg>
+        <p>爱，你看</p>
+    </div>
+    <div class="write">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-love-1"></use>
+        </svg>
+        <p>爱，记下来</p>
+    </div>
+</div>
+
+
+
+
+
+<script src="jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="icon/iconfont.js"></script>
+<script src="js/rem.js"></script>
+<script>
+    function show(){
+    MemorialDay=new Date("May 5,2015,00:00:00");
+    today=new Date();
+    // console.log(today.getTime());
+    // console.log(MemorialDay.getTime());
+    timeold=(today.getTime()-MemorialDay.getTime());
+    sectimeold=timeold/1000;
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000;
+    e_daysold=timeold/msPerDay;
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=Math.floor(e_hrsold);
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=Math.floor((e_hrsold-hrsold)*60);
+    seconds=Math.floor((e_minsold-minsold)*60);
+    // console.log(daysold,hrsold,minsold,seconds);
+    var day=document.getElementById('day');
+    var hour=document.getElementById('hour');
+    var min=document.getElementById('min');
+    var sec=document.getElementById('sec');
+    day.innerHTML=daysold+'天';
+    hour.innerHTML=hrsold+'时';
+    min.innerHTML=minsold+'分';
+    sec.innerHTML=seconds+'秒';
+    }
+    setInterval(function () {
+        show()
+    },1000);
+    $(".say").click(function(){
+        $(".say").find("svg").attr("id","active");
+        setTimeout(function(){
+            location.href='say.html';
+            $(".say").find("svg").attr("id","");
+            
+        },1000)
+    });
+    $(".look").click(function(){
+        $(".look").find("svg").attr("id","active");
+        setTimeout(function(){
+            location.href='look.html';
+            $(".look").find("svg").attr("id","");
+        },1000)
+    });
+    $(".write").click(function(){
+        $(".write").find("svg").attr("id","active");
+        setTimeout(function(){
+            location.href='write.html';
+            $(".write").find("svg").attr("id","");
+        },1000)
+    });
+</script>
+</body>
+</html>

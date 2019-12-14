@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Len与Kelly的纪念日</title>
+    <link rel="shortcut icon" href="imgs/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        *{
+            border: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color:inherit;
+        }
+        #goback{
+            font-size: .521rem;
+            color: rgb(147,115,173);
+            margin-left: .3rem;
+            margin-top: -.2rem;
+        }
+        body{
+            background-color:rgb(242, 153, 89);
+            position: relative; 
+        }
+        .describ{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: .3rem;
+            color: rgb(147,115,173);
+            text-align: center;
+            margin-top: .5rem;
+        }
+        .lanren{width:6rem;overflow:hidden;margin:.7rem auto;}
+        .flip-3d { 
+            perspective: 3rem; width: 33%; float: left;  
+        }
+        .flip-3d figure { 
+        position: relative; 
+        transform-style: preserve-3d; 
+        transition: 1s transform;
+        font-size: .6rem;
+        margin:.2rem;
+        height: 1.58rem;
+        }
+        .flip-3d figure img { 
+        width: 100%; height: auto; 
+        }
+        .flip-3d figure figcaption { 
+        position: absolute; 
+        width: 100%; height: 100%; top: 0; 
+        transform: rotateY(.5turn) translateZ(1px); 
+        background: rgba(255,255,255,0.9); 
+        text-align: center; 
+        padding-top: 45%; 
+        opacity: 0.6; 
+        transition: 1s .5s opacity; 
+        }
+        .flip-3d:hover figure { transform: rotateY(.5turn); }
+        .flip-3d:hover figure figcaption { opacity: 1; }
+        .flip-3d figure:after { 
+        content: " "; display: block;
+        height: 8vw; width: 100%; 
+        transform: rotateX(90deg); 
+        background-image:radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%); 
+        }
+        @media screen and (max-width: 800px) { 
+        #flip-3d { perspective-origin: center top; }
+            div#flip-3d figure { 
+            float: none; 
+            width: 50%; 
+            margin: 0 auto; 
+            margin-bottom: 12vw; 
+        }
+        .flip-3d figure figcaption{font-size: 0.1rem;}
+            div#flip-3d figure:last-child { display: none; }
+	    }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="imgs/heart.png" width="25px" height="25px">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="love.html">LOVE<span class="sr-only">(current)</span></a></li>
+                <li><a href="say.html">爱，说出来<span class="sr-only">(current)</span></a></li>
+                <li><a href="look.html">爱，你看<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="write.html">爱，记下来<span class="sr-only">(current)</span></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<a href="love.html"><i class="glyphicon glyphicon-chevron-left" id="goback"></i></a>
+<div class="describ">
+    <p>试着点一下下面的图片哦</p>
+</div>
+<div class="lanren">
+    <div class="flip-3d">
+         <figure>
+            <img src="imgs/1.JPG">
+            <figcaption>在一起在一起</figcaption>
+        </figure>
+    </div>
+    <div class="flip-3d">
+        <figure>
+            <img src="imgs/2.JPG">
+            <figcaption>第一次牵手</figcaption>
+          </figure>
+    </div>
+    <div class="flip-3d">
+        <figure>
+            <img src="imgs/3.JPG">
+            <figcaption>一起出去游玩</figcaption>
+        </figure>
+    </div>
+    <div class="flip-3d">
+        <figure>
+            <img src="imgs/4.JPG">
+            <figcaption>要结婚喽</figcaption>
+        </figure>
+    </div>
+    <div class="flip-3d">
+        <figure>
+            <img src="imgs/5.JPG">
+            <figcaption>小可爱驾到</figcaption>
+        </figure>
+    </div>
+    <div class="flip-3d">
+        <figure>
+            <img src="imgs/6.JPG">
+            <figcaption>我第一次当爸爸</figcaption>
+        </figure>
+    </div>
+    <div class="flip-3d">
+        <figure>
+            <img src="imgs/7.JPG">
+            <figcaption>你第一次当妈妈</figcaption>
+        </figure>
+    </div>
+    <div class="flip-3d">
+        <figure>
+            <img src="imgs/8.JPG">
+            <figcaption>我就是小可爱啊</figcaption>
+        </figure>
+    </div>
+    <div class="flip-3d">
+        <figure>
+            <img src="imgs/9.JPG">
+            <figcaption>喜欢我不</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/rem.js"></script>
+<script>
+    
+</script>
+</body>
+</html>
